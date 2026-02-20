@@ -1,1 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
+body
+{
+  font-size: 20px;
+  background-color: white;
+  color: black;
+}
+
+.title
+  {
+    font-size: 180px;
+    line-height: 180px;
+    font-weight: 1000;
+    word-wrap: wrap;
+  }
+  .etymology
+  {
+    font-size: 80px;
+    line-height: 80px;
+    font-weight: 1000;
+    word-wrap: wrap;
+  }
+
+  .pc
+  {
+    visibility: hidden;
+  }
+
+@media (max-width: 600px)
+{
+  body{
+    background-color: white;
+  }
+
+  .title
+  {
+    font-size: 230px;
+    line-height: 230px;
+    font-weight: 1000;
+    word-wrap: wrap;
+  }
+  .etymology
+  {
+    font-size: 80px;
+    line-height: 80px;
+    font-weight: 1000;
+    word-wrap: wrap;
+  }
+
+  .pc
+  {
+    visibility: hidden;
+  }
+}

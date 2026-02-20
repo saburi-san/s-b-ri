@@ -1,0 +1,36 @@
+*
+{
+  margin: 0px;
+  padding: 0px;
+}
+
+.table-section
+{
+  width: fit-content;
+  height: fit-content;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: darkseagreen;
+}
+
+table
+{
+  background-color: darkseagreen;
+}
+table, th, tr, td
+{
+  border: 0.5px solid;
+  border-collapse: collapse;
+}
+th, td
+{
+  width: 60px;
+  height: 20px;
+  text-align: center;
+}
+input
+{
+  width: 55px;
+  background-color: transparent;
+  border: none;
+}

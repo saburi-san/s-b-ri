@@ -1,0 +1,46 @@
+<h2>catalogue</h2>
+
+<p>inline editing</p>
+
+<div class='table-section'>
+  <table id='table'>
+    <thead>
+        <th>one</th>
+        <th>two</th>
+        <th>three</th>
+        <th>four</th>
+        <th>five</th>
+    </thead>
+    <tbody *ngFor='let item of data, index as i'>
+      <tr  (dblclick)='edit(item)' (keyup.enter)='post(item, i)' >
+
+          <td *ngIf='!item.isedit' [textContent]='item.uno.data'></td>
+          <td *ngIf='item.isedit'>
+            <input type="text" name='uno' [textContent]='item.uno.data' [placeholder]='item.uno.data' [(ngModel)]='item.uno.data'>
+          </td>
+
+        <td *ngIf='!item.isedit' [textContent]='item.dos.data'></td>
+        <td *ngIf='item.isedit'>
+          <input type="text" name='dos' [textContent]='item.dos.data' [placeholder]='item.dos.data' [(ngModel)]='item.dos.data'>
+        </td>
+
+        <td *ngIf='!item.isedit' [textContent]='item.tres.data'></td>
+        <td *ngIf='item.isedit'>
+          <input type="text" name='tres' [textContent]='item.tres.data' [placeholder]='item.tres.data' [(ngModel)]='item.tres.data'>
+        </td>
+
+        <td  *ngIf='!item.isedit' [textContent]='item.quatro.data'></td>
+        <td *ngIf='item.isedit'>
+          <input type="text" name='quatro' (textContent)='item.quatro.data' [placeholder]='item.quatro.data' [(ngModel)]='item.quatro.data'>
+        </td>
+
+        <td *ngIf='!item.isedit' [textContent]='item.cinco.data'></td>
+        <td *ngIf='item.isedit'>
+          <input type="text" name='cinco' [textContent]='item.cinco.data' [placeholder]='item.cinco.data' [(ngModel)]='item.cinco.data'>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>information cards</p>

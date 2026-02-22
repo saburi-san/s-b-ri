@@ -1,5 +1,60 @@
-*
+a
 {
-  margin: 0px;
-  padding: 0px;
+  text-decoration: none;
+  color: black;
 }
+
+h1
+{
+  align-self: center;
+  font-size: 220px;
+}
+
+.apostrophe-star
+{
+  line-height: 100px;
+  text-align: center;
+
+  pointer-events: none;
+}
+
+.bckgrnd-lyr
+{
+  display: grid;
+  grid-template-rows: 1fr;
+  position: absolute;
+  top: 33px;
+  z-index: -1;
+  height: var(--heightlesspadding);
+  width: var(--widthlesspadding);
+  justify-items: center;
+}
+
+
+.fade-tw
+{
+  opacity: 0;
+  animation: fade-tw 1s ease-out forwards;
+}
+
+.fade-tw:nth-child(1)
+{
+  animation-delay: 0s;
+}
+.fade-tw:nth-child(2), .fade-tw:nth-child(3)
+{
+  animation-delay: 0.4s;
+}
+.fade-tw:nth-child(5), .fade-tw:nth-child(6)
+{
+  animation-delay: 0.8s;
+}
+.fade-tw:nth-child(8), .fade-tw:nth-child(9)
+{
+  animation-delay: 1.2s;
+}
+
+
+
+
+

@@ -20,8 +20,11 @@ export class AppComponent {
       data.style.background = 'darkseagreen';
     }
 
+
+    let p = event.target.parentNode;
+
     //console.log(event.target.tagName)
-    if (event.target.tagName == 'TD')
+    if (event.target.tagName == 'TD' || p.tagName == 'TD')
     {
       let element: any = event.target;
       //console.log(element.cellIndex);
@@ -51,13 +54,22 @@ export class AppComponent {
         tr[Array.prototype.indexOf.call(tr, element.parentNode) - 1].children[element.cellIndex].style.background = '#a58fbc';
     }
 
+    if (event.target.tagName == 'INPUT' )
+    {
+      let elem = event.target
+      elem.focus();
+    }
+
   }
 
   @HostListener('mouseover', ['$event'])
   mouseover(event: any)
   {
     const tr: any = document.querySelectorAll('tr');
-    const td: any = document.querySelectorAll('td')
+    const td: any = document.querySelectorAll('td');
+    //
+    //const input: any = document.querySelectorAll('td>input');
+
 
     for (let data of td)
     {
@@ -93,6 +105,12 @@ export class AppComponent {
         tr[Array.prototype.indexOf.call(tr, element.parentNode) + 1].children[element.cellIndex].style.background = '#a9846a';
       if (tr[Array.prototype.indexOf.call(tr, element.parentNode) - 1] != undefined)
         tr[Array.prototype.indexOf.call(tr, element.parentNode) - 1].children[element.cellIndex].style.background = '#a58fbc';
+    }
+
+    if (event.target.tagName == 'INPUT')
+    {
+      let elem = event.target
+      elem.focus();
     }
 
   }

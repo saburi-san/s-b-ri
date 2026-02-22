@@ -11,11 +11,9 @@ import { FormsModule } from '@angular/forms';
 export class CatalogueComponent {
 
 
-  postdata: any;
-
   data: any = [
     {
-      uno: { data: 'one'},
+      uno: { data: 'uno'},
       dos: { data: 'dos'},
       tres: { data: 'tres'},
       quatro: { data: 'quatro'},
@@ -59,7 +57,11 @@ export class CatalogueComponent {
 
   edit(item: any)
   {
-    item.isedit = !item.isedit
+    for (let item of this.data)
+    {
+      item.isedit = false;
+    }
+    item.isedit = true;
     //console.log(item)
   }
 
@@ -67,12 +69,20 @@ export class CatalogueComponent {
   {
     this.data[index] = item;
 
-
-
-    console.log(index)
-    console.log(item)
-    console.log(this.data)
     item.isedit = !item.isedit
+    //console.log(index)
+    //console.log(item)
+    //console.log(this.data)
+  }
+
+
+  @HostListener('window:keyup.escape', ['$event'])
+  escape(event: any)
+  {
+      for (let entry of this.data)
+      {
+        entry.isedit = false;
+      }
   }
 
   sameplace: any = [];
@@ -109,7 +119,6 @@ export class CatalogueComponent {
         //console.log('check')
       }
     }
-
     this.i++;
   }
 

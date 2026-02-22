@@ -1,9 +1,3 @@
-*
-{
-  margin: 0px;
-  padding: 0px;
-}
-
 .table-section
 {
   width: fit-content;
@@ -13,24 +7,86 @@
   background-color: darkseagreen;
 }
 
-table
+.definition-section
 {
-  background-color: darkseagreen;
+  width: var(--widthlesspaddingplus);
+  height: fit-content;
+  padding: var(--padding);
+  border-radius: 5px;
+  background-color: rosybrown;
 }
-table, th, tr, td
+
+
+
+
+
+
+
+
+@media (min-width: 600px)
 {
-  border: 0.5px solid;
-  border-collapse: collapse;
+  .definition-section
+  {
+    width: var(--midwidthlesspaddingplus);
+  }
+
+  .definition-section > p
+  {
+    width: 75%;
+  }
+
+  p
+  {
+    width: 50%;
+  }
+
+
 }
-th, td
+
+
+
+
+
+
+
+
+
+
+.fade:nth-child(1)
 {
-  width: 60px;
-  height: 20px;
-  text-align: center;
+  animation-delay: 0s;
 }
-input
+.fade:nth-child(2)
 {
-  width: 55px;
-  background-color: transparent;
-  border: none;
+  animation-delay: 0s;
 }
+.fade:nth-child(3)
+{
+  animation-delay: 0.4s;
+}
+.fade:nth-child(4)
+{
+  animation-delay: 0.8s;
+}
+.fade:nth-child(5)
+{
+  animation-delay: 1.2s;
+}
+.fade:nth-child(6)
+{
+  animation-delay: 1.8s;
+}
+.fade:nth-child(7)
+{
+  animation-delay: 2s;
+}
+.fade:nth-child(8)
+{
+  animation-delay: 2.5s;
+}
+.fade:nth-child(9)
+{
+  animation-delay: 2.5s;
+}
+
+

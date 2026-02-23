@@ -76,8 +76,9 @@ export class AppComponent {
       data.style.background = 'darkseagreen';
     }
 
+
     //console.log(event.target.tagName)
-    if (event.target.tagName == 'TD')
+    if (event.target.tagName == 'TD' )
     {
       let element: any = event.target;
       //console.log(element.cellIndex);
@@ -111,6 +112,22 @@ export class AppComponent {
     {
       let elem = event.target
       elem.focus();
+      let parent = elem.parentNode;
+      let siblings = parent.parentNode.children;
+      for (let sibling of siblings)
+        if (sibling == siblings[parent.cellIndex - 1] && sibling != undefined)
+          sibling.style.background = '#bca58f';
+        else if (sibling == siblings[parent.cellIndex + 1] && sibling != undefined)
+          sibling.style.background = 'brown';
+        else if (sibling != siblings[parent.cellIndex] && sibling != undefined)
+          sibling.style.background = 'seagreen';
+
+      parent.style.background = 'rosybrown';
+
+      if (tr[Array.prototype.indexOf.call(tr, parent.parentNode) + 1] != undefined)
+        tr[Array.prototype.indexOf.call(tr, parent.parentNode) + 1].children[parent.cellIndex].style.background = '#a9846a';
+      if (tr[Array.prototype.indexOf.call(tr, parent.parentNode) - 1] != undefined)
+        tr[Array.prototype.indexOf.call(tr, parent.parentNode) - 1].children[parent.cellIndex].style.background = '#a58fbc';
     }
 
   }

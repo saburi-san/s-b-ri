@@ -4,14 +4,9 @@ a
   color: black;
 }
 
-h1
-{
-  align-self: center;
-  font-size: 220px;
-}
-
 .apostrophe-star
 {
+  font-size: 220px;
   line-height: 100px;
   text-align: center;
 
@@ -23,10 +18,11 @@ h1
   display: grid;
   grid-template-rows: 1fr;
   position: absolute;
-  top: 33px;
+  top: 23px;
   z-index: -1;
   height: var(--heightlesspadding);
   width: var(--widthlesspadding);
+  align-items: center;
   justify-items: center;
 }
 

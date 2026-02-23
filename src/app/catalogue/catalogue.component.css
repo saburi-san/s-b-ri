@@ -27,12 +27,22 @@
 {
   .definition-section
   {
-    width: var(--midwidthlesspaddingplus);
+    width: 326px;
+  }
+
+  .definition
+  {
+    width: 300px;
   }
 
   .definition-section > p
   {
-    width: 75%;
+    width: 100%;
+  }
+
+  .definition > p
+  {
+    width: 100%;
   }
 
   p

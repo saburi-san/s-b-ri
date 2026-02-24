@@ -21,10 +21,10 @@ export class AppComponent {
     }
 
 
-    let p = event.target.parentNode;
+
 
     //console.log(event.target.tagName)
-    if (event.target.tagName == 'TD' || p.tagName == 'TD')
+    if (event.target.tagName == 'TD' )
     {
       let element: any = event.target;
       //console.log(element.cellIndex);
@@ -83,10 +83,10 @@ export class AppComponent {
       let element: any = event.target;
       //console.log(element.cellIndex);
 
-      for (let row of tr)
+      /*for (let row of tr)
       {
         row.children[element.cellIndex].style.background = 'seagreen';
-      }
+      }*/
 
 
       //console.log(event.target.tagName)
@@ -96,8 +96,8 @@ export class AppComponent {
           sibling.style.background = '#bca58f';
         else if (sibling == siblings[element.cellIndex + 1] && sibling != undefined)
           sibling.style.background = 'brown';
-        else if (sibling != siblings[element.cellIndex] && sibling != undefined)
-          sibling.style.background = 'seagreen';
+        //else if (sibling != siblings[element.cellIndex] && sibling != undefined)
+          //sibling.style.background = 'seagreen';
 
       element.style.background = 'rosybrown';
       //console.log(Array.prototype.indexOf.call(tr, element.parentNode))
@@ -108,26 +108,36 @@ export class AppComponent {
         tr[Array.prototype.indexOf.call(tr, element.parentNode) - 1].children[element.cellIndex].style.background = '#a58fbc';
     }
 
-    if (event.target.tagName == 'INPUT')
+
+
+    if (event.target.tagName == 'INPUT' || event.target.tagName == 'SPAN')
     {
       let elem = event.target
       elem.focus();
       let parent = elem.parentNode;
       let siblings = parent.parentNode.children;
+
+     /* for (let row of tr)
+      {
+        row.children[parent.cellIndex].style.background = 'seagreen';
+      }*/
+
+
       for (let sibling of siblings)
         if (sibling == siblings[parent.cellIndex - 1] && sibling != undefined)
           sibling.style.background = '#bca58f';
         else if (sibling == siblings[parent.cellIndex + 1] && sibling != undefined)
           sibling.style.background = 'brown';
-        else if (sibling != siblings[parent.cellIndex] && sibling != undefined)
-          sibling.style.background = 'seagreen';
+        //else if (sibling != siblings[parent.cellIndex] && sibling != undefined)
+          //sibling.style.background = 'seagreen';
 
-      parent.style.background = 'rosybrown';
 
       if (tr[Array.prototype.indexOf.call(tr, parent.parentNode) + 1] != undefined)
         tr[Array.prototype.indexOf.call(tr, parent.parentNode) + 1].children[parent.cellIndex].style.background = '#a9846a';
       if (tr[Array.prototype.indexOf.call(tr, parent.parentNode) - 1] != undefined)
         tr[Array.prototype.indexOf.call(tr, parent.parentNode) - 1].children[parent.cellIndex].style.background = '#a58fbc';
+
+      parent.style.background = 'rosybrown';
     }
 
   }

@@ -68,20 +68,18 @@ table, th, tr, td
 
 th, td
 {
-  width: 60px;
-  height: 20px;
-  text-align: center;
-  vertical-align: middle;
+  padding: 5px;
+  /*height: 20px;*/
+  text-align: left;
+  vertical-align: text-top;
 }
 
 input
 {
-  width: 100%;
-  height: 100%;
   margin: auto;
   background-color: transparent;
   border: none;
-  text-align: center;
+  text-align: left;
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;

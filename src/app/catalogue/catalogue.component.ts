@@ -13,40 +13,44 @@ export class CatalogueComponent {
 
   data: any = [
     {
-      uno: { data: 'uno'},
-      dos: { data: 'dos'},
-      tres: { data: 'tres'},
-      quatro: { data: 'quatro'},
-      cinco: { data: 'cinco'},
+      unit: 'LN01',
+      name: 'le nuage',
+      class: 'couch',
+      quantity: 30,
+      orderdate: '31-01-2026',
       isedit: false
     },
     {
-      uno: { data: 'uno'},
-      dos: { data: 'dos'},
-      tres: { data: 'tres'},
-      quatro: { data: 'quatro'},
-      cinco: { data: 'cinco'}
+      unit: 'LN02',
+      name: 'les petite nuages',
+      class: 'ottoman',
+      quantity: 30,
+      orderdate: '31-02-2026',
+      isedit: false
     },
     {
-      uno: { data: 'uno'},
-      dos: { data: 'dos'},
-      tres: { data: 'tres'},
-      quatro: { data: 'quatro'},
-      cinco: { data: 'cinco'}
+      unit: 'TB01',
+      name: 'table basse',
+      class: 'coffee table',
+      quantity: 5,
+      orderdate: '10-02-2026',
+      isedit: false
     },
     {
-      uno: { data: 'uno'},
-      dos: { data: 'dos'},
-      tres: { data: 'tres'},
-      quatro: { data: 'quatro'},
-      cinco: { data: 'cinco'}
+      unit: 'TB02',
+      name: 'petite table basse',
+      class: 'accent table',
+      quantity: 10,
+      orderdate: '10-02-2026',
+      isedit: false
     },
     {
-      uno: { data: 'uno'},
-      dos: { data: 'dos'},
-      tres: { data: 'tres'},
-      quatro: { data: 'quatro'},
-      cinco: { data: 'cinco'}
+      unit: 'TP01',
+      name: 'tapis persan',
+      class: 'persian rug',
+      quantity: 5,
+      orderdate: '10-02-2026',
+      isedit: false
     }
   ]
 
@@ -70,6 +74,11 @@ export class CatalogueComponent {
     this.data[index] = item;
 
     item.isedit = !item.isedit
+    const tds = document.querySelectorAll('td');
+    for (const td of tds)
+    {
+      td.style.background = 'darkseagreen';
+    }
     //console.log(index)
     //console.log(item)
     //console.log(this.data)

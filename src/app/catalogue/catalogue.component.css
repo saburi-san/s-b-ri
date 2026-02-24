@@ -1,6 +1,16 @@
+thead:nth-child(1)
+{
+  width:100;
+}
+
+td > span
+{
+  pointer-events: none;
+}
+
 .table-section
 {
-  width: fit-content;
+  width: calc(100vw - 20px - 20px);
   height: fit-content;
   padding: 10px;
   border-radius: 5px;
@@ -9,7 +19,7 @@
 
 .definition-section
 {
-  width: var(--widthlesspaddingplus);
+  width: calc(100vw - 20px - 20px);
   height: fit-content;
   padding: var(--padding);
   border-radius: 5px;
@@ -17,17 +27,42 @@
 }
 
 
-
-
-
-
-
-
-@media (min-width: 600px)
+.definition > p
 {
+  width: 100%;
+}
+
+.definition-section > p
+{
+  width: 100%;
+}
+
+.rows
+{
+  display: none;
+}
+
+.lastcell
+{
+  min-width: calc(131px - 10px);
+  width: calc(100vw - 265px);
+}
+.lastcellinput
+{
+  min-width: calc(131px - 10px - 10px);
+  width: calc(100vw - 265px );
+}
+
+@media (width > 600px)
+{
+  .table-section
+  {
+    width: fit-content;
+  }
   .definition-section
   {
-    width: 326px;
+    /*width: calc(50vw - 20px - 20px);*/
+    width: calc(562px - 20px);
   }
 
   .definition
@@ -35,14 +70,19 @@
     width: 300px;
   }
 
-  .definition-section > p
+  td
   {
-    width: 100%;
+    width: fit-content;
   }
 
-  .definition > p
+  .lastcell
   {
-    width: 100%;
+    width: 155px;
+  }
+
+  .lastcellinput
+  {
+    width: 155px;
   }
 
   p
@@ -50,10 +90,17 @@
     width: 50%;
   }
 
+  .rows
+  {
+    display: table-cell;
+  }
 
 }
 
+@media (width: 100%)
+{
 
+}
 
 
 

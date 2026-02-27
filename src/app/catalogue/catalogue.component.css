@@ -26,13 +26,22 @@ td > span
   background-color: rosybrown;
 }
 
+.shortcuts-section
+{
+/*width: calc(50vw - 20px - 20px);*/
+  width: calc(100vw - 20px - 20px);
+  height: fit-content;
+  padding: var(--padding);
+  border-radius: 5px;
+  background-color: #926851;
+}
 
 .definition > p
 {
   width: 100%;
 }
 
-.definition-section > p
+.definition-section > p, .shortcuts-section > p
 {
   width: 100%;
 }
@@ -62,7 +71,12 @@ td > span
   .definition-section
   {
     /*width: calc(50vw - 20px - 20px);*/
-    width: calc(562px - 20px);
+    width: calc(546px - 20px);
+  }
+  .shortcuts-section
+  {
+    /*width: calc(50vw - 20px - 20px);*/
+    width: calc(546px - 20px);
   }
 
   .definition
@@ -87,7 +101,7 @@ td > span
 
   p
   {
-    width: 50%;
+    width: calc(546px);
   }
 
   .rows
@@ -145,5 +159,16 @@ td > span
 {
   animation-delay: 2.5s;
 }
-
+.fade:nth-child(10)
+{
+  animation-delay: 2.7s;
+}
+.fade:nth-child(11)
+{
+  animation-delay: 2.9s;
+}
+.fade:nth-child(12)
+{
+  animation-delay: 3.1s;
+}
 

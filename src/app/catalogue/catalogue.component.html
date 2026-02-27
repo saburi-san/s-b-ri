@@ -7,7 +7,7 @@
         <th style='width: calc(60px - 10px);'>unit</th>
         <th style='width: calc(150px - 10px);'>title</th>
         <th class='lastcell'>class</th>
-        <th style='width: calc(56px - 10px);' class='rows'>qntty</th>
+        <th style='width: calc(40px - 10px);' class='rows'>qty</th>
         <th style='width: calc(105px - 10px);' class='rows'>order date</th>
     </thead>
     <tbody *ngFor='let item of data, index as i'>
@@ -29,7 +29,7 @@
 
         <td class='rows'>
           <span *ngIf='!item.isedit' [textContent]='item.quantity'></span>
-          <input *ngIf='item.isedit' style='width: calc(56px - 10px);' type="text"[placeholder]='item.quantity' [(ngModel)]='item.quantity'>
+          <input *ngIf='item.isedit' style='width: calc(40px - 10px);' type="text"[placeholder]='item.quantity' [(ngModel)]='item.quantity'>
         </td>
         <td class='rows'>
           <span *ngIf='!item.isedit' [textContent]='item.orderdate'></span>
@@ -57,14 +57,25 @@
   </sup> did you notice the superscript?
   <br>
   <br>
-  a superscript is a letter, figure or symbol written higher relative to normal text. click it to reveal the information.
-  <br>
-  <br>
-  definitions can be used to provide customers with <i>depth</i> without overwhelming them with a sea of text.</p>
+  a superscript is a letter, figure or symbol written higher relative to normal text. hover over it to reveal a definition or further explanation. </p>
 </div>
 
+<p class='fade'>definitions can be used to provide customers with <i>depth</i> without overwhelming them with a sea of text.</p>
 <br>
 
 <p class='fade'>shortcuts</p>
-
-
+<div class='shortcuts-section fade'>
+  <p>
+    press:
+    <br>
+    Alt + H to go to the home page.
+    <br>
+    Alt + C to go to the catelogue page.
+    <br>
+    Alt + A to go to the about page.
+    <br>
+    Alt + Shift + C to go to the contact page.
+  </p>
+</div>
+<p class='fade'>shortcuts enable a streamlined workflow saving time taken to perform some of the most routine tasks by cutting out unnecessary movement.</p>
+<br>

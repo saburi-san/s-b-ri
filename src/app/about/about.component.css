@@ -1,4 +1,42 @@
+.table-section
+{
+  width: fit-content;
+  height: fit-content;
+  background-color: #bc8f8f75;
+  backdrop-filter: blur(1px);
+  padding: 10px;
+  border-radius: 5px;
+  border: 4px inset #bc8f8f25;
+}
 
+td
+{
+  width: 270px;
+  background-color: #bc8f8f75;
+}
+
+td:hover
+{
+  background-color: #bc8f8f;
+}
+
+p
+{
+  width: 50%;
+}
+
+@media (width < 600px)
+{
+  p
+  {
+    width: 100%;
+  }
+
+  .table-section
+  {
+    width: calc(100vw - 20px - 20px - 10px);
+  }
+}
 
 .fade:nth-child(1)
 {
@@ -15,6 +53,14 @@
 .fade:nth-child(6)
 {
   animation-delay: 0.6s;
+}
+.fade:nth-child(7)
+{
+  animation-delay: 0.8s;
+}
+.fade:nth-child(8)
+{
+  animation-delay: 1.0s;
 }
 
 

@@ -15,6 +15,7 @@ td > span
   padding: 10px;
   border-radius: 5px;
   background-color: darkseagreen;
+  opacity: 0.5;
 }
 
 .definition-section
@@ -110,12 +111,6 @@ td > span
   }
 
 }
-
-@media (width: 100%)
-{
-
-}
-
 
 
 

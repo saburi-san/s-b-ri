@@ -1,6 +1,6 @@
 :root
 {
-  --padding: 10px;
+  --padding: 20px;
 
   --widthlesspaddingplus: calc(100vw - 20px - 20px);
   --widthlesspadding: calc(100vw - 20px);
@@ -29,17 +29,24 @@ body
 
   padding: var(--padding);
 
-  color: black;
-  background-color: white;
+  /*color: black;*/
+  color: white;
+  background-color: black;
 
   font-size: 20px;
 
   overflow-x: hidden !important;
 }
 
+a
+{
+  color: white;
+  text-decoration: none;
+}
+
 p
 {
-  width: 75%;
+  width: 100%;
 }
 
 .title
@@ -165,9 +172,6 @@ span.definition
 
 @media (max-width: 600px)
 {
-  body{
-    background-color: white;
-  }
 
   .title
   {

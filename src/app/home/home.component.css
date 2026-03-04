@@ -1,0 +1,143 @@
+a
+{
+  text-decoration: none;
+}
+
+[id=title]
+{
+  width: calc(100vw - 30px - 10px);
+
+  padding: 5px;
+
+  text-align: center;
+
+  background-color: #111111;
+  border-radius: 10px;
+}
+
+[id=image]
+{
+  width: calc(100vw - 30px);
+
+  text-align: center;
+
+  position: absolute;
+  top: 10vh;
+}
+
+[id=statement]
+{
+  width: calc(100vw - 30px);
+  text-align: center;
+
+  position: absolute;
+  top: 18vh;
+}
+
+[id=root], [id=stem], [id=branch]
+{
+  opacity: 0.60;
+  width: calc(100vw - 40px - 40px);
+  height: calc(65vh - 40px - 10vh);
+
+  padding: 20px;
+
+  border-radius: 20px;
+
+  position: absolute;
+}
+
+
+[id=route]
+{
+  display: grid;
+  grid-gap: 10px;
+
+  position: absolute;
+  bottom: 50px;
+}
+
+[id=route] > a
+{
+  width: fit-content;
+  height: 30px;
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: #000000;
+
+  text-align: center;
+
+}
+
+
+
+[id=pack]
+{
+  position: absolute;
+  bottom: -10vh;
+}
+
+[class=card]
+{
+  transition: all 400ms;
+}
+
+[id=root]
+{
+  /*background-color: #111111;*/
+  bottom: 160px;
+}
+
+[id=stem]
+{
+  /*background-color: #222222;*/
+  bottom: 80px;
+}
+
+[id=branch]
+{
+  /*background-color: #333333;*/
+  bottom: 0px;
+}
+
+[id=start]
+{
+  width: 120px;
+  height: 30px;
+  padding: 5px 0px 5px 0px;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: #000000;
+
+  text-align: center;
+
+  position: absolute;
+  z-index: 2;
+  bottom: 20px;
+  right: 20px;
+}
+
+[class=transition]
+{
+  transition: all 1s ease;
+}
+
+[class=fx]
+{
+  animation: fade 1s;
+}
+
+@keyframes fade
+{
+  0%
+  {
+    opacity: 0;
+    transform: translateY(15px) scaleX(0.95);
+  }
+  70%
+  {
+    opacity: 1;
+  }
+
+}

@@ -3,9 +3,9 @@
   --padding: 20px;
 
   --widthlesspaddingplus: calc(100vw - 20px - 20px);
-  --widthlesspadding: calc(100vw - 20px);
+  --widthlesspadding: calc(100vw - 40px);
   --midwidthlesspaddingplus: calc(50vw - 20px - 20px);
-  --midwidthlesspadding: calc(50vw - 20px);
+  --midwidthlesspadding: calc(50vw - 40px);
   --heightlesspaddingplus: calc(100vh - 20px - 20px);
   --heightlesspadding: calc(100vh - 20px);
   /* width: vw minus body:padding + parent:padding */

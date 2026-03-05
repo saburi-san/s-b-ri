@@ -39,7 +39,7 @@ export class HomeComponent {
           children[2].style.bottom = '80px';
           children[2].style.zIndex = 0;
           children[2].classList.toggle('transition');
-          setTimeout(() => {children[2].classList.toggle('transition');}, 0)
+          setTimeout(() => {children[2].classList.toggle('transition');}, 500)
           //console.log('check')
         }
         this.memory.push(element)
@@ -48,7 +48,7 @@ export class HomeComponent {
         this.memory[this.memory.length-1].style.bottom = '0px';
         this.memory[this.memory.length-1].style.zIndex = 1;
         this.memory[this.memory.length-1].classList.toggle('fx');
-        setTimeout(() => {this.memory[this.memory.length-1].classList.toggle('fx');}, 900)
+        setTimeout(() => {this.memory[this.memory.length-1].classList.toggle('fx');}, 500)
 
       }
       if (this.memory[this.memory.length-2])
@@ -56,7 +56,7 @@ export class HomeComponent {
         this.memory[this.memory.length-2].style.bottom = '80px';
         this.memory[this.memory.length-2].style.zIndex = 0;
         this.memory[this.memory.length-2].classList.toggle('transition');
-        setTimeout(() => {this.memory[this.memory.length-2].classList.toggle('transition');}, 0)
+        setTimeout(() => {this.memory[this.memory.length-2].classList.toggle('transition');}, 500)
       }
 
       if (this.memory[this.memory.length-1] != children[0] && this.memory[this.memory.length-2] != children[0])
@@ -64,25 +64,31 @@ export class HomeComponent {
         children[0].style.bottom = '160px';
         children[0].style.zIndex = -1;
         children[0].classList.toggle('transition');
-        setTimeout(() => {children[0].classList.toggle('transition');}, 0)
+        setTimeout(() => {children[0].classList.toggle('transition');}, 500)
       }
       else if (this.memory[this.memory.length-1] != children[1] && this.memory[this.memory.length-2] != children[1])
       {
         children[1].style.bottom = '160px';
         children[1].style.zIndex = -1;
         children[1].classList.toggle('transition');
-        setTimeout(() => {children[1].classList.toggle('transition');}, 0)
+        setTimeout(() => {children[1].classList.toggle('transition');}, 500)
       }
       else
       {
         children[2].style.bottom = '160px';
         children[2].style.zIndex = -1;
         children[2].classList.toggle('transition');
-        setTimeout(() => {children[2].classList.toggle('transition');}, 0)
+        setTimeout(() => {children[2].classList.toggle('transition');}, 500)
       }
 
       //console.log(this.memory)
 
+
+      for (const child of children)
+      {
+        child.style.pointerEvents = 'none';
+        setTimeout(() => child.style.pointerEvents = 'auto', 500)
+      }
     }
 
   }

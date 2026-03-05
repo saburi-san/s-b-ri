@@ -84,7 +84,6 @@ a
 [id=start]
 {
   width: fit-content;
-  height: 30px;
   padding: 5px 10px 5px 10px;
   border-radius: 5px;
   color: #ffffff;
@@ -123,7 +122,6 @@ a
 {
   opacity: 0;
   width: fit-content;
-  height: 30px;
   padding: 5px 10px 5px 10px;
   border-radius: 5px;
   color: #ffffff;

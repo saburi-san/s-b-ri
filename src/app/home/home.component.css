@@ -81,6 +81,30 @@ a
   bottom: 0px;
 }
 
+[id=sub-title]
+{
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+h5
+{
+  pointer-events: none;
+}
+
+
+[id=read]
+{
+  width: fit-content;
+  margin-top: 40px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+  letter-spacing: 2px;
+  background-color: #00000060;
+}
+
+
 [id=start]
 {
   width: fit-content;

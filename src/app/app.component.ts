@@ -1,5 +1,5 @@
 import { Component, HostListener } from '@angular/core';
-import { RouterOutlet, RouterLink, Router } from '@angular/router';
+import { RouterOutlet, RouterLink, Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +12,30 @@ export class AppComponent {
 
   constructor(private router: Router)
   {
+    this.router.events.subscribe(event => {
+    if (event instanceof NavigationEnd)
+    {
+      if (document.querySelector('[id=selected]'))
+      {
+        const selected: any = document.querySelector('[id=selected]')
+        selected.innerText = window.location.pathname;
+      }
+    }
+    else
+    {
 
+    }
+  })
+  }
+
+
+
+  @HostListener('hashchange', ['$event'])
+  load(event: any)
+  {
+
+    const selected: any = document.querySelector('[id=selected]')
+    selected.innerText = window.location.pathname;
   }
 
   @HostListener('window:keyup', ['$event'])
@@ -37,7 +60,7 @@ export class AppComponent {
   }
 
   @HostListener('click', ['$event'])
-  start(event: any)
+  reveal(event: any)
   {
     const id = event.target.id
     const route: any = document.querySelector('[id=route]')
@@ -50,6 +73,21 @@ export class AppComponent {
     else
     {
       route.style.display = 'none';
+    }
+
+
+    const options: any = document.querySelector('[id=options]')
+
+    const chevron: any = document.querySelector('[id=chevron]')
+    if (id == 'selected' || id == 'chevron')
+    {
+      options.style.display = 'grid';
+      chevron.innerText = 'expand_less';
+    }
+    else
+    {
+      options.style.display = 'none';
+      chevron.innerText = 'expand_more';
     }
   }
 

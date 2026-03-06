@@ -38,6 +38,83 @@ body
   overflow-x: hidden !important;
 }
 
+[id=image]
+{
+  width: calc(100vw - 40px);
+
+  text-align: center;
+
+  position: absolute;
+  top: 10vh;
+}
+
+[id=container]
+{
+  width: calc(100vw - 40px);
+  position: absolute;
+  top: 15vh;
+
+}
+
+[id=select]
+{
+  width: fit-content;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #77777750;
+  letter-spacing: 2px;
+  font-size: 12px;
+  margin:auto;
+}
+
+[id=read]
+{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+}
+
+[id=select] > [id=read]
+{
+  border-radius: 5px;
+  background-color: black;
+  padding: 5px;
+}
+
+[id=option]
+{
+  display: flex;
+  width: fit-content;
+}
+
+[id=options]
+{
+  display: none;
+
+  grid-gap: 5px;
+  width: inherit;
+
+  border-radius: 5px;
+  background-color: #33333390;
+  backdrop-filter: blur(1px);
+
+  position: absolute;
+  top: calc(15px + 5px);
+  margin-top: 10px;
+  z-index: 1;
+}
+
+[id=options] > a
+{
+  padding: 5px;
+}
+
+[id=blog]
+{
+  position: absolute;
+  top: 20vh;
+}
+
 a
 {
   color: white;

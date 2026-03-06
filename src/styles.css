@@ -58,13 +58,25 @@ body
 
 [id=select]
 {
+  display: flex;
   width: fit-content;
   padding: 5px;
   border-radius: 5px;
   background-color: #77777750;
   letter-spacing: 2px;
-  font-size: 12px;
+  font-size: 14px;
   margin:auto;
+}
+
+[id=back]
+{
+  margin: auto 0;
+  margin-right: 5px;
+}
+
+[id=back] > a
+{
+  color: #e7e7e7;
 }
 
 [id=read]
@@ -78,13 +90,19 @@ body
 {
   border-radius: 5px;
   background-color: black;
-  padding: 5px;
+  padding: 2px 5px;
 }
 
 [id=option]
 {
   display: flex;
   width: fit-content;
+}
+
+[id=chevron]
+{
+  transform: translateY(2px);
+  font-size: 10px;
 }
 
 [id=options]

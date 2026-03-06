@@ -1,6 +1,6 @@
 thead:nth-child(1)
 {
-  width:100;
+  width: 100%;
 }
 
 td > span
@@ -10,31 +10,31 @@ td > span
 
 .table-section
 {
-  width: calc(100vw - 20px - 20px);
+  width: calc(100vw - 40px - 20px);
   height: fit-content;
   padding: 10px;
   border-radius: 5px;
-  background-color: darkseagreen;
+  background-color: #33333350;
   opacity: 0.5;
 }
 
 .definition-section
 {
-  width: calc(100vw - 20px - 20px);
+  width: calc(100vw - 40px - 40px);
   height: fit-content;
   padding: var(--padding);
   border-radius: 5px;
-  background-color: rosybrown;
+  background-color: #33333350;
 }
 
 .shortcuts-section
 {
 /*width: calc(50vw - 20px - 20px);*/
-  width: calc(100vw - 20px - 20px);
+  width: calc(100vw - 40px - 40px);
   height: fit-content;
   padding: var(--padding);
   border-radius: 5px;
-  background-color: #926851;
+  background-color: #33333350;
 }
 
 .definition > p
@@ -54,13 +54,13 @@ td > span
 
 .lastcell
 {
-  min-width: calc(131px - 10px);
-  width: calc(100vw - 265px);
+  min-width: calc(131px - 20px);
+  width: calc(100vw - 285px);
 }
 .lastcellinput
 {
-  min-width: calc(131px - 10px - 10px);
-  width: calc(100vw - 265px );
+  min-width: calc(131px - 20px - 10px);
+  width: calc(100vw - 285px );
 }
 
 @media (width > 600px)

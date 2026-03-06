@@ -141,7 +141,7 @@ a
 
 p
 {
-  width: 100%;
+  width: calc(100vw - 40px);
 }
 
 
@@ -149,12 +149,12 @@ p
 /* visual aid + inline editing */
 table
 {
-  background-color: darkseagreen;
+  background-color: #33333350;
 }
 
 table, th, tr, td
 {
-  border: 0.5px solid;
+  border: 0.5px solid black;
   border-collapse: collapse;
 }
 
@@ -175,19 +175,20 @@ input
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
-  color: #444444;
+  color: #d3d3d3;
 
 }
 
 input:focus{
   /*pointer-events: none;*/
   outline: 1px inset;
+  color: #d3d3d3;
 }
 
 /* definitions */
 sup
 {
-  color: #222222;
+  color: white;
   padding-left: 1px;
   padding-bottom: 5px;
   padding-top: 5px;
@@ -210,7 +211,7 @@ span.definition
   z-index: 2;
   transform: translateY(-20px);
   visibility: hidden;
-  color: black;
+  color: white;
 }
 
 

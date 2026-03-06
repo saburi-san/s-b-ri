@@ -1,10 +1,11 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-catalogue',
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, RouterLink],
   templateUrl: './catalogue.component.html',
   styleUrl: './catalogue.component.css'
 })
@@ -76,7 +77,7 @@ export class CatalogueComponent {
     const tds = document.querySelectorAll('td');
     for (const td of tds)
     {
-      td.style.background = 'darkseagreen';
+      td.style.background = '#33333360';
     }
     //console.log(index)
     //console.log(item)
@@ -133,7 +134,7 @@ export class CatalogueComponent {
 
     for (let data of td)
     {
-      data.style.background = 'darkseagreen';
+      data.style.background = '#33333360';
     }
 
     //console.log(event.target.tagName)
@@ -151,19 +152,19 @@ export class CatalogueComponent {
       let siblings = element.parentNode.children;
       for (let sibling of siblings)
         if (sibling == siblings[element.cellIndex - 1] && sibling != undefined)
-          sibling.style.background = '#bca58f';
+          sibling.style.background = '#bca58f60';
         else if (sibling == siblings[element.cellIndex + 1] && sibling != undefined)
-          sibling.style.background = '#926851';
+          sibling.style.background = '#92685160';
         else if (sibling != siblings[element.cellIndex] && sibling != undefined)
           sibling.style.background = 'seagreen';
 
-      element.style.background = 'rosybrown';
+      element.style.background = '#bc8f8f70';
       //console.log(Array.prototype.indexOf.call(tr, element.parentNode))
 
       if (tr[Array.prototype.indexOf.call(tr, element.parentNode) + 1] != undefined)
-        tr[Array.prototype.indexOf.call(tr, element.parentNode) + 1].children[element.cellIndex].style.background = '#a9846a';
+        tr[Array.prototype.indexOf.call(tr, element.parentNode) + 1].children[element.cellIndex].style.background = '#a9846a60';
       if (tr[Array.prototype.indexOf.call(tr, element.parentNode) - 1] != undefined)
-        tr[Array.prototype.indexOf.call(tr, element.parentNode) - 1].children[element.cellIndex].style.background = '#a17a7a';
+        tr[Array.prototype.indexOf.call(tr, element.parentNode) - 1].children[element.cellIndex].style.background = '#a17a7a60';
     }
 
     if (event.target.tagName == 'INPUT' )
@@ -184,7 +185,7 @@ export class CatalogueComponent {
 
     for (let data of td)
     {
-      data.style.background = 'darkseagreen';
+      data.style.background = '#33333360';
     }
 
     //console.log(event.target.tagName)
@@ -202,19 +203,19 @@ export class CatalogueComponent {
       let siblings = element.parentNode.children;
       for (let sibling of siblings)
         if (sibling == siblings[element.cellIndex - 1] && sibling != undefined)
-          sibling.style.background = '#bca58f';
+          sibling.style.background = '#bca58f60';
         else if (sibling == siblings[element.cellIndex + 1] && sibling != undefined)
-          sibling.style.background = '#926851';
+          sibling.style.background = '#92685160';
         //else if (sibling != siblings[element.cellIndex] && sibling != undefined)
           //sibling.style.background = 'seagreen';
 
-      element.style.background = 'rosybrown';
+      element.style.background = '#bc8f8f70';
       //console.log(Array.prototype.indexOf.call(tr, element.parentNode))
 
       if (tr[Array.prototype.indexOf.call(tr, element.parentNode) + 1] != undefined)
-        tr[Array.prototype.indexOf.call(tr, element.parentNode) + 1].children[element.cellIndex].style.background = '#a9846a';
+        tr[Array.prototype.indexOf.call(tr, element.parentNode) + 1].children[element.cellIndex].style.background = '#a9846a60';
       if (tr[Array.prototype.indexOf.call(tr, element.parentNode) - 1] != undefined)
-        tr[Array.prototype.indexOf.call(tr, element.parentNode) - 1].children[element.cellIndex].style.background = '#a17a7a';
+        tr[Array.prototype.indexOf.call(tr, element.parentNode) - 1].children[element.cellIndex].style.background = '#a17a7a60';
     }
 
     if (event.target.tagName == 'INPUT' || event.target.tagName == 'SPAN')
@@ -231,18 +232,18 @@ export class CatalogueComponent {
 
       for (let sibling of siblings)
         if (sibling == siblings[parent.cellIndex - 1] && sibling != undefined)
-          sibling.style.background = '#bca58f';
+          sibling.style.background = '#bca58f60';
         else if (sibling == siblings[parent.cellIndex + 1] && sibling != undefined)
-          sibling.style.background = '#926851';
+          sibling.style.background = '#92685160';
         //else if (sibling != siblings[parent.cellIndex] && sibling != undefined)
           //sibling.style.background = 'seagreen';
 
       if (tr[Array.prototype.indexOf.call(tr, parent.parentNode) + 1] != undefined)
-        tr[Array.prototype.indexOf.call(tr, parent.parentNode) + 1].children[parent.cellIndex].style.background = '#a9846a';
+        tr[Array.prototype.indexOf.call(tr, parent.parentNode) + 1].children[parent.cellIndex].style.background = '#a9846a60';
       if (tr[Array.prototype.indexOf.call(tr, parent.parentNode) - 1] != undefined)
-        tr[Array.prototype.indexOf.call(tr, parent.parentNode) - 1].children[parent.cellIndex].style.background = '#a17a7a';
+        tr[Array.prototype.indexOf.call(tr, parent.parentNode) - 1].children[parent.cellIndex].style.background = '#a17a7a60';
 
-      parent.style.background = 'rosybrown';
+      parent.style.background = '#bc8f8f70';
     }
 
   }

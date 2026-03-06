@@ -108,4 +108,31 @@ h5
 
 
 
+[class=transition]
+{
+  transition: all 0.5s ease;
+}
 
+[class=fx]
+{
+  animation: fade 0.5s;
+}
+
+[class=paralysis]
+{
+  pointer-events: none;
+}
+
+@keyframes fade
+{
+  0%
+  {
+    opacity: 0;
+    transform: translateY(80px) scaleX(0.90);
+  }
+  100%
+  {
+    opacity: 0.65;
+  }
+
+}

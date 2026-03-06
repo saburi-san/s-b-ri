@@ -11,10 +11,6 @@ export class HomeComponent {
 
   memory: any = []
 
-  constructor()
-  {
-  }
-
 
   @HostListener('click', ['$event'])
   effect(event: any)

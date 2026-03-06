@@ -36,5 +36,21 @@ export class AppComponent {
     }
   }
 
+  @HostListener('click', ['$event'])
+  start(event: any)
+  {
+    const id = event.target.id
+    const route: any = document.querySelector('[id=route]')
+
+    if (id == 'start')
+    {
+      route.style.display = 'grid';
+
+    }
+    else
+    {
+      route.style.display = 'none';
+    }
+  }
 
 }

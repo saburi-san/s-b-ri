@@ -23,6 +23,7 @@ a
 
   position: absolute;
   top: 18vh;
+  top: 18dvh;
 }
 
 [id=root], [id=stem], [id=branch]
@@ -30,6 +31,7 @@ a
   opacity: 0.60;
   width: calc(100vw - 40px - 40px);
   height: calc(65vh - 40px - 10vh);
+  height: calc(65dvh - 40px - 10dvh);
 
   padding: 20px;
 
@@ -47,6 +49,7 @@ a
 {
   position: absolute;
   bottom: -10vh;
+  bottom: -10dvh;
 }
 
 [class=card]

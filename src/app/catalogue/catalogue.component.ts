@@ -143,10 +143,6 @@ export class CatalogueComponent {
       let element: any = event.target;
       //console.log(element.cellIndex);
 
-      for (let row of tr)
-      {
-        row.children[element.cellIndex].style.background = 'seagreen';
-      }
 
       //console.log(event.target.tagName)
       let siblings = element.parentNode.children;

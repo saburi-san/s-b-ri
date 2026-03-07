@@ -38,6 +38,8 @@ body
   overflow-x: hidden !important;
 }
 
+
+
 [id=image]
 {
   width: calc(100vw - 40px);
@@ -131,6 +133,7 @@ body
 {
   position: absolute;
   top: 20vh;
+  top: 20dvh;
 }
 
 a
@@ -175,14 +178,14 @@ input
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
-  color: #d3d3d3;
+  color: #000000;
 
 }
 
 input:focus{
   /*pointer-events: none;*/
-  outline: 1px inset;
-  color: #d3d3d3;
+  outline: 1px inset black;
+  color: #000000;
 }
 
 /* definitions */
@@ -201,15 +204,19 @@ sup:hover .definition
 
 span.definition
 {
-  width: 200px;
-  background-color: #bc8f8f75;
+  width: 196px;
+  background-color: #bc8f8f70;
   backdrop-filter: blur(1px);
-  padding: 10px;
+  padding: 5px;
   border-radius: 5px;
-  border: 4px inset #bc8f8f25;
+  border-left: 4px outset #bc8f8f60;
+  border-top: 4px outset #bc8f8f60;
+  border-right: 4px outset #bc8f8f;
+  border-bottom: 4px outset #bc8f8f;
+
   position: absolute;
   z-index: 2;
-  transform: translateY(-20px);
+  transform: translateY(-15px);
   visibility: hidden;
   color: white;
 }

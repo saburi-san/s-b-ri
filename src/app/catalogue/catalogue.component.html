@@ -29,7 +29,7 @@
   <table id='table'>
     <thead>
         <th style='width: calc(60px - 10px);'>unit</th>
-        <th style='width: calc(150px - 10px);'>title</th>
+        <th style='width: calc(150px - 20px);'>title</th>
         <th class='lastcell'>class</th>
         <th style='width: calc(40px - 10px);' class='rows'>qty</th>
         <th style='width: calc(105px - 10px);' class='rows'>order date</th>
@@ -43,7 +43,7 @@
 
         <td>
           <span *ngIf='!item.isedit' [textContent]='item.name'></span>
-          <input *ngIf='item.isedit' style='width: calc(150px - 10px);' type="text" [placeholder]='item.name' [(ngModel)]='item.name'>
+          <input *ngIf='item.isedit' style='width: calc(150px - 20px);' type="text" [placeholder]='item.name' [(ngModel)]='item.name'>
         </td>
 
         <td>

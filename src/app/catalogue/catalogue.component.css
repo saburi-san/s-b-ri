@@ -55,12 +55,12 @@ td > span
 .lastcell
 {
   min-width: calc(131px - 20px);
-  width: calc(100vw - 285px);
+  width: calc(100vw - 274px);
 }
 .lastcellinput
 {
   min-width: calc(131px - 20px - 10px);
-  width: calc(100vw - 285px );
+  width: calc(100vw - 274px );
 }
 
 @media (width > 600px)

@@ -65,7 +65,7 @@ export class AppComponent {
     const id = event.target.id
     const route: any = document.querySelector('[id=route]')
 
-    if (id == 'start')
+    if (id == 'start' || id == 'programme')
     {
       route.style.display = 'grid';
 

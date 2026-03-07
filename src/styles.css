@@ -132,8 +132,7 @@ body
 [id=blog]
 {
   position: absolute;
-  top: 20vh;
-  top: 20dvh;
+  top: 22vh;
 }
 
 a
@@ -209,8 +208,8 @@ span.definition
   backdrop-filter: blur(1px);
   padding: 5px;
   border-radius: 5px;
-  border-left: 4px outset #bc8f8f60;
-  border-top: 4px outset #bc8f8f60;
+  border-left: 4px outset #bc8f8f20;
+  border-top: 4px outset #bc8f8f20;
   border-right: 4px outset #bc8f8f;
   border-bottom: 4px outset #bc8f8f;
 

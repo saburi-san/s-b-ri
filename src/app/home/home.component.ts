@@ -9,13 +9,29 @@ import { RouterLink } from '@angular/router';
 })
 export class HomeComponent {
 
-  memory: any = []
+   memory: any = []
 
+  @HostListener('resize', ['$event'])
+  resize(event: any)
+  {
+    if (innerWidth > 500)
+    {
+    console.log('resized')
+    const cards: any = document.querySelectorAll('[id=pack] > ');
+
+    for (const card of cards)
+    {
+      card.style.top = '0px';
+    }
+    }
+  }
 
   @HostListener('click', ['$event'])
   effect(event: any)
   {
-
+    console.log(screen.availWidth)
+  if (innerWidth <= 500)
+    {
     let element: any = event.target;
     let parent: any = element.parentNode;
     let children: any = parent.children;
@@ -86,7 +102,7 @@ export class HomeComponent {
         setTimeout(() => child.style.pointerEvents = 'auto', 500)
       }
     }
-
+  }
   }
 
 }

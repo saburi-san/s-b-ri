@@ -1,3 +1,12 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 :root
 {
   --padding: 20px;

@@ -5,14 +5,16 @@ a
 
 [id=title]
 {
-  width: calc(100vw - 40px - 10px);
-
-  padding: 5px;
+  width: calc(100vw - 40px - 30px);
 
   text-align: center;
+  padding: 5px 15px;
 
-  background-color: #111111;
+
+  background-color: #33333370;
+  color: #ffffff90;
   border-radius: 10px;
+  letter-spacing: 2px;
 }
 
 
@@ -25,9 +27,9 @@ a
   top: 18vh;
 }
 
-[id=root], [id=stem], [id=branch]
+[id=root] , [id=stem], [id=branch]
 {
-  opacity: 0.60;
+  opacity: 1;
   width: calc(100vw - 40px - 40px);
   height: calc(65vh - 40px - 10vh);
 
@@ -46,7 +48,53 @@ a
 [id=pack]
 {
   position: absolute;
-  bottom: -10vh;
+  /*bottom: -10vh;*/
+  top: 100vh;
+}
+
+@media (width > 500px)
+{
+  [id=pack]
+  {
+    width: calc(100vw - 40px);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 5vw;
+
+    top: 60vh;
+    justify-content: center;
+  }
+
+  [id=root], [id=stem], [id=branch]
+  {
+    position: relative;
+    width: 20vw;
+    min-width: 15vw;
+    height: 50vh;
+    bottom: 180px;
+  }
+
+  [id=root]
+  {
+
+  }
+}
+@media (width <= 500px)
+{
+  [id=root]
+  {
+    bottom: 160px;
+  }
+
+  [id=stem]
+  {
+    bottom: 80px;
+  }
+
+  [id=branch]
+  {
+    bottom: 0px;
+  }
 }
 
 [class=card]
@@ -56,22 +104,43 @@ a
 
 [id=root]
 {
-  /*background-color: #111111;*/
-  bottom: 160px;
+  background-color: #11111165;
+  overflow: hidden;
 }
 
 [id=stem]
 {
-  /*background-color: #222222;*/
-  bottom: 80px;
+  background-color: #11111165;
+  overflow: hidden;
 }
 
 [id=branch]
 {
-  /*background-color: #333333;*/
-  bottom: 0px;
+  background-color: #11111165;
+  overflow: hidden;
 }
 
+  [id=vid]
+  {
+    position: relative;
+    height: calc(65vh - 5vh);
+
+    transform: translateY(-22px) translateX(-21px);
+    pointer-events: none;
+  }
+
+
+  [id=content]
+  {
+    position: absolute;
+    top: 15px;
+    pointer-events: none;
+  }
+
+  [id=read2]
+  {
+    pointer-events: auto;
+  }
 [id=sub-title]
 {
   letter-spacing: 2px;
@@ -119,11 +188,14 @@ h5
   0%
   {
     opacity: 0;
+  }
+  10%
+  {
     transform: translateY(80px) scaleX(0.90);
   }
   100%
   {
-    opacity: 0.65;
+    opacity: 1;
   }
 
 }

@@ -77,7 +77,7 @@ export class CatalogueComponent {
     const tds = document.querySelectorAll('td');
     for (const td of tds)
     {
-      td.style.background = '#33333360';
+      td.style.background = '#11111160';
     }
     //console.log(index)
     //console.log(item)
@@ -134,7 +134,7 @@ export class CatalogueComponent {
 
     for (let data of td)
     {
-      data.style.background = '#33333360';
+      data.style.background = '#11111160';
     }
 
     //console.log(event.target.tagName)
@@ -181,7 +181,7 @@ export class CatalogueComponent {
 
     for (let data of td)
     {
-      data.style.background = '#33333360';
+      data.style.background = '#11111160';
     }
 
     //console.log(event.target.tagName)

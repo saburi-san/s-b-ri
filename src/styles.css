@@ -63,9 +63,10 @@ body
 {
   width: calc(100vw - 40px);
   position: absolute;
-  top: 15vh;
+  top: 16vh;
 
 }
+
 
 [id=select]
 {
@@ -78,6 +79,7 @@ body
   font-size: 14px;
   margin:auto;
 }
+
 
 [id=back]
 {
@@ -144,6 +146,21 @@ body
   top: 22vh;
 }
 
+
+
+@media ((pointer: coarse) and (orientation: landscape))
+{
+  [id=container]
+  {
+    top: 20vh;
+  }
+
+  [id=blog]
+  {
+    top: 32vh;
+  }
+}
+
 a
 {
   color: white;
@@ -175,6 +192,12 @@ th, td
   /*height: 20px;*/
   text-align: left;
   vertical-align: text-top;
+
+}
+
+th
+{
+  background-color: #11111150;
 }
 
 input

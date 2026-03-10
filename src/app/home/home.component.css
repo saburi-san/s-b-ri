@@ -47,10 +47,13 @@ a
 
 [id=pack]
 {
+  width: calc(100vw - 40px);
   position: absolute;
   /*bottom: -10vh;*/
-  top: 100vh;
+  top: 105vh;
 }
+
+
 
 @media (width > 500px)
 {
@@ -97,6 +100,19 @@ a
   }
 }
 
+@media ((pointer: coarse) and (orientation: landscape))
+{
+  [id=pack]
+  {
+    top: 80vh;
+  }
+
+  [id=image]
+  {
+    display: none;
+  }
+}
+
 [class=card]
 {
   transition: all 400ms;
@@ -123,7 +139,18 @@ a
   [id=vid]
   {
     position: relative;
-    height: calc(65vh - 5vh);
+    height: calc(65vh);
+
+
+    transform: translateY(-23px) translateX(-22px);
+    pointer-events: none;
+  }
+
+  [id=vid1]
+  {
+    position: relative;
+    width: 130%;
+
 
     transform: translateY(-22px) translateX(-21px);
     pointer-events: none;

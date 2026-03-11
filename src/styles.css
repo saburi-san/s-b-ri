@@ -49,6 +49,18 @@ body
 
 
 
+[id=image-plus]
+{
+  width: calc(100vw - 40px);
+
+  text-align: center;
+
+  position: absolute;
+  top: 12vh;
+
+  opacity: 0;
+  animation: minimal-plus 4s ease-out forwards;
+}
 [id=image]
 {
   width: calc(100vw - 40px);
@@ -56,7 +68,12 @@ body
   text-align: center;
 
   position: absolute;
-  top: 10vh;
+  top: 12vh;
+}
+
+[id=dodai]
+{
+  height: 20px;
 }
 
 [id=container]
@@ -281,7 +298,8 @@ span.definition
   animation: fade-tw 1s ease-out forwards;
 }
 
-@keyframes fade{
+@keyframes fade
+{
   from {
     transform: translateX(-50px);
     opacity: 0;
@@ -291,7 +309,8 @@ span.definition
     opacity: 1;
   }
 }
-@keyframes fade-tw{
+@keyframes fade-tw
+{
   from {
     transform: translateY(50px);
     opacity: 0;
@@ -302,7 +321,8 @@ span.definition
   }
 }
 
-@keyframes minimal{
+@keyframes minimal
+{
   from {
     opacity: 0;
   }
@@ -311,6 +331,32 @@ span.definition
   }
 }
 
+@keyframes minimal-plus
+{
+  0%
+  {
+    opacity: 1;
+    transform: translateY(38vh);
+  }
+  50%
+  {
+    opacity: 1;
+  }
+  79%
+  {
+    opacity: 0;
+    transform: translateY(38vh);
+  }
+  80%
+  {
+    opacity: 0;
+    transform: translateY(0vh);
+  }
+  100%
+  {
+    opacity: 1;
+  }
+}
 
 
 

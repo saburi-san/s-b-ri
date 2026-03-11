@@ -11,6 +11,8 @@ export class HomeComponent {
 
    memory: any = []
 
+
+
   @HostListener('resize', ['$event'])
   resize(event: any)
   {
@@ -28,6 +30,19 @@ export class HomeComponent {
   @HostListener('click', ['$event'])
   effect(event: any)
   {
+    const root: any = document.querySelector('[id=root]');
+    const stem: any = document.querySelector('[id=stem]');
+    const branch: any = document.querySelector('[id=branch]');
+
+    if (window.innerWidth < 500)
+    {
+      if(root.classList != null)
+      {
+        branch.classList.remove('animation1')
+        stem.classList.remove('animation2')
+        root.classList.remove('animation3')
+      }
+    }
   if (innerWidth <= 500)
     {
     let element: any = event.target;

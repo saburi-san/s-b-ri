@@ -3,12 +3,21 @@ a
   text-decoration: none;
 }
 
+[id=container2]
+{
+  display: flex;
+  width: calc(100vw - 40px);
+  justify-content: center;
+}
+
 [id=title]
 {
-  width: calc(100vw - 40px - 30px);
+  width: calc(100vw - 40px - 10px);
 
   text-align: center;
-  padding: 5px 15px;
+  padding: 5px 5px;
+
+  font-size: 16px;
 
 
   background-color: #33333370;
@@ -66,6 +75,12 @@ a
 
 @media (width > 500px)
 {
+  [id=title]
+  {
+    width: calc(100vw - 22vw);
+    font-size: 14px;
+  }
+
   [id=pack]
   {
     width: calc(100vw - 40px);
@@ -88,7 +103,23 @@ a
 
   [id=root]
   {
+    opacity: 0;
+    animation: minimal 2s ease-out forwards;
+    animation-delay: 1800ms;
+  }
 
+  [id=stem]
+  {
+    opacity: 0;
+    animation: minimal 2s ease-out forwards;
+    animation-delay: 2100ms;
+  }
+
+  [id=branch]
+  {
+    opacity: 0;
+    animation: minimal 3s ease-out forwards;
+    animation-delay: 2400ms;
   }
 }
 
@@ -96,7 +127,7 @@ a
 {
   [id=pack]
   {
-    top: 80vh;
+    top: 85vh;
   }
 
   [id=image]
@@ -114,30 +145,18 @@ a
 {
   background-color: #11111165;
   overflow: hidden;
-
-  opacity: 0;
-  animation: minimal 2s ease-out forwards;
-  animation-delay: 1800ms;
 }
 
 [id=stem]
 {
   background-color: #11111165;
   overflow: hidden;
-
-  opacity: 0;
-  animation: minimal 2s ease-out forwards;
-  animation-delay: 2100ms;
 }
 
 [id=branch]
 {
   background-color: #11111165;
   overflow: hidden;
-
-  opacity: 0;
-  animation: minimal 3s ease-out forwards;
-  animation-delay: 2400ms;
 }
 @media (width <= 500px)
 {
@@ -145,7 +164,7 @@ a
   {
 
     opacity: 0;
-    animation: minimal s ease-out forwards;
+    animation: minimal 2s ease-out forwards;
     animation-delay: 2900ms;
   }
 
@@ -157,7 +176,22 @@ a
   [id=root]
   {
     bottom: 160px;
+  }
 
+  [class=animation1]
+  {
+    opacity: 0;
+    animation: minimal 0.5s ease-out forwards;
+    animation-delay: 1800ms;
+  }
+  [class=animation2]
+  {
+    opacity: 0;
+    animation: minimal 0.5s ease-out forwards;
+    animation-delay: 2200ms;
+  }
+  [class=animation3]
+  {
     opacity: 0;
     animation: minimal 0.5s ease-out forwards;
     animation-delay: 2600ms;
@@ -166,19 +200,11 @@ a
   [id=stem]
   {
     bottom: 80px;
-
-    opacity: 0;
-    animation: minimal 0.5s ease-out forwards;
-    animation-delay: 2200ms;
   }
 
   [id=branch]
   {
     bottom: 0px;
-
-    opacity: 0;
-    animation: minimal 0.5s ease-out forwards;
-    animation-delay: 1800ms;
   }
 }
 
@@ -196,7 +222,7 @@ a
   [id=vid1]
   {
     position: relative;
-    width: 130%;
+    height: 140%;
 
 
     transform: translateY(-22px) translateX(-21px);

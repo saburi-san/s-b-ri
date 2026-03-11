@@ -29,6 +29,14 @@ a
   }
 }
 
+@media ((pointer: coarse) and (orientation: landscape))
+{
+  [id=start]
+  {
+    bottom: 20px;
+  }
+}
+
 [id=programme], [id=route] > a
 {
   margin-top: auto;

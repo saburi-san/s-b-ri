@@ -9,6 +9,11 @@
   border: 4px inset #bc8f8f25;
 }
 
+table, th, td
+{
+  border: 0.5px solid #33333330;
+}
+
 td
 {
   width: 270px;
@@ -17,7 +22,7 @@ td
 
 td:hover
 {
-  background-color: #bc8f8f;
+  background-color: #bc8f8f95;
 }
 
 p
@@ -34,7 +39,7 @@ p
 
   .table-section
   {
-    width: calc(100vw - 20px - 20px - 10px);
+    width: calc(100vw - 40px - 20px - 10px);
   }
 }
 

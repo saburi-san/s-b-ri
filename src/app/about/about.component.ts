@@ -23,7 +23,7 @@ export class AboutComponent {
       {
         let element: any = event.target;
 
-        element.style.background = '#bc8f8f';
+        element.style.background = '#bc8f8f95';
       }
   }
 }

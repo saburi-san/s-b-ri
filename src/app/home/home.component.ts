@@ -16,11 +16,10 @@ export class HomeComponent {
   {
     if (innerWidth > 500)
     {
-    console.log('resized')
     const cards: any = document.querySelectorAll('[id=pack] > ');
 
     for (const card of cards)
-    {
+     {
       card.style.top = '0px';
     }
     }
@@ -29,7 +28,6 @@ export class HomeComponent {
   @HostListener('click', ['$event'])
   effect(event: any)
   {
-    console.log(screen.availWidth)
   if (innerWidth <= 500)
     {
     let element: any = event.target;

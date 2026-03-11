@@ -21,6 +21,14 @@ a
 
 }
 
+@media(pointer: fine)
+{
+  [id=start]
+  {
+    bottom: 20px;
+  }
+}
+
 [id=programme], [id=route] > a
 {
   margin-top: auto;

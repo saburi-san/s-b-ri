@@ -63,7 +63,7 @@ body
 {
   width: calc(100vw - 40px);
   position: absolute;
-  top: 16vh;
+  top: 18vh;
 
 }
 
@@ -77,7 +77,11 @@ body
   background-color: #77777750;
   letter-spacing: 2px;
   font-size: 14px;
-  margin:auto;
+  margin: auto;
+
+  opacity: 0;
+  animation: minimal 2s ease-out forwards;
+
 }
 
 
@@ -143,10 +147,25 @@ body
 [id=blog]
 {
   position: absolute;
-  top: 22vh;
+  top: 26vh;
+
+  opacity: 0;
+  animation: minimal 3s ease-out forwards;
+  animation-delay: 1000ms;
 }
 
+@media (pointer: coarse)
+{
+  [id=container]
+  {
+    top: 16vh;
+  }
 
+  [id=blog]
+  {
+    top: 23vh;
+  }
+}
 
 @media ((pointer: coarse) and (orientation: landscape))
 {
@@ -279,6 +298,15 @@ span.definition
   }
   to {
     transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes minimal{
+  from {
+    opacity: 0;
+  }
+  to {
     opacity: 1;
   }
 }
